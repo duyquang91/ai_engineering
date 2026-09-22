@@ -40,7 +40,7 @@ By this way, there are many benefits:
 * Less token consumption: agent just runs the script rather than reasoning.
 
 ## The keys
-Nothing is perfect, we can see many benefits by using deterministic vs prompt engineering gate but the prompt is dynamic at runtime, easier to implement, scale & distrbute. Code/Script must be defined at build time, harder to maintain, scale & distibute. You can easily create a gate as a skill and everyone can use it, for the code/script snippet you have to make sure it works in all machine with difference binary versions, ...
+Nothing is perfect, we can see many benefits by using deterministic vs prompt engineering gate but the prompt is dynamic at runtime, easier to implement, scale & distribute. Code/Script must be defined at build time, harder to maintain, scale & distribute. You can easily create a gate as a skill and everyone can use it, for the code/script snippet you have to make sure it works in all machine with difference binary versions, ...
 
 Deterministic gate is mostly in-use by the custom loop, workflow or agent agentic system. We split the whole flow into smaller stages where the deterministic gate fit perfectly at the end of each stage to determine whether the flow continue to next stage or retry/rework to fulfill the gate check.
 
