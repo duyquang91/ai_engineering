@@ -5,7 +5,6 @@
 In AI engineering, a gate  means a decision/checkpoint at the end of the loop to determines whether the loop is done. For example: after generating the Swift codes, we want to make sure it follows the [Airbnb Swift Style Guide](https://github.com/airbnb/swift). 
 
 The gate can be implemented by the prompt engineering. For example, spawn a sub agent & use official [skill](https://swift.airbnb.tech/skill) to evaluate the new code gen. The skill by itself mostly declate the style guide so sub agent can use to compare & check.
-> Why sub agent? The main loop agent evaluates its result cause the bias, the decision is mostly pass!
 
 ```mermaid
 flowchart LR
@@ -13,6 +12,7 @@ flowchart LR
     B -->|Pass| C[Continue]
     B -->|Fail| A
 ```
+> Why sub agent? The main loop agent evaluates its result cause the bias, the decision is mostly pass!
 
 This approach sounds good but there are some drawbacks:
 * Heavy rules, definitions, constraints, conditions, ... to make a right decision.
